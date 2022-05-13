@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    width: 100vw;
+}
+
+.container {
+    display: grid;
+    grid-template:
+        'menu-lateral main-header'
+        'menu-lateral main-page';
+}
+
+.main-header {
+    grid-area: main-header;
+    background: #FDF1EB;
+    width: calc(100vw - 220px);
+    height: 68px;
+    margin-left: 220px;
+    padding-left: 36px;
+    font-weight: 400;
+
+    .main-title {
+        margin-top: 8px;
+        font-size: 0.875rem;
+    }
+
+    .text-01 {
+        font-size: 1.375rem;
+    }
+
+    .text-02 {
+        font-size: 0.875rem;
+    }
+}
+
+.logo {
+
+    background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+    width: 220px;
+    height: 68px;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.menu-lateral {
+
+    grid-area: menu-lateral;
+    position: absolute;
+    width: 220px;
+    height: 2500px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+    ul {
+
+        background: #e7e7e7;
+
+        li {
+
+            background: #ffffff;
+            height: 33px;
+            font-size: 0.938rem;
+            font-weight: 500;
+            padding: 8px;
+            padding-left: 24px;
+            margin-bottom: 3px;
+
+            &:hover {
+                padding-left: 32px;
+                background: #FDF1EB;
+            }
+
+        }
+
+    }
+
+}
+
+.main-page {
+    grid-area: main-page;
+    display: grid;
+    grid-template:
+        'main-article details'
+        'main-article details'
+        'resumo resumo'
+        'discusoes discusoes';
+    margin-left: 220px;
+    padding-left: 36px;
+
+    article {
+        grid-area: main-article;
+        
+        h2 {
+            color: #ED7839;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 25px;
+            letter-spacing: 0.05em;
+            padding-right: 180px;
+            margin: 20px 0;      
+        }
+    }
+
+    .details {
+        grid-area: details;
+
+        .buttons {
+            display: flex;
+
+            .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 500;
+                font-size: 1rem;
+                color: #ffffff;
+                background: #ED7839;
+                border-radius: 4px;
+                padding: 6px;
+                margin: 5px;
+            }
+
+            p {
+                display: inline;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    .description {
+        margin-top: 16px;
+        margin-right: 64px;
+        color: #5C5C5C;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        border: 1px solid #ECECEC;
+
+        .subtitle {
+            background: #FDF1EB;
+            padding: 12px;
+        }
+
+        div {
+            padding: 24px;
+        }
+
+        .references {
+            font-size: 0.75rem;
+        }
+    }
+
+    .resumo {
+        grid-area: resumo;
+        width: 80vw;
+        color: #5C5C5C;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        border: 1px solid #ECECEC;
+        margin-top: 24px;
+
+        .subtitle {
+            background: #FDF1EB;
+            padding: 12px;
+        }
+
+        .text {
+            padding: 24px;
+        }
+    }
+
+    .discusoes {
+        grid-area: discusoes;
+        width: 80vw;
+        color: #5C5C5C;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        border: 1px solid #ECECEC;
+        margin-top: 24px;
+
+        .subtitle {
+            background: #FDF1EB;
+            padding: 12px;
+        }
+
+        .text {
+            padding: 24px;
+        }
+    }
+
+}
